@@ -986,7 +986,7 @@ font-size: 30px;
 }
 
 footer {
-position: absolute;
+position: relative;
 bottom: 10px;
 right:10px;
 text-align: right;
@@ -1043,7 +1043,7 @@ if ($conn == false)
     <table class="selectform" style="width: auto;margin: 0 auto;">
     <tr>
       <td>User: </td>
-      <td><input type="text" name="connection[user]" value="<?php echo $_SESSION[ 'connection' ][ 'user' ]; ?>" title="Enter the Oracle user name" /></td>
+      <td><input type="text" required name="connection[user]" value="<?php echo $_SESSION[ 'connection' ][ 'user' ]; ?>" title="Enter the Oracle user name" /></td>
 
       <script type="text/javascript">
       document.forms[ 'form1' ].elements[ 'connection[user]' ].focus();
@@ -1052,11 +1052,11 @@ if ($conn == false)
     </tr>
     <tr>
       <td>Password: </td>
-      <td><input type="password" name="connection[password]" value="" title="Enter the Oracle user's password" /></td>
+      <td><input type="password" required name="connection[password]" value="" title="Enter the Oracle user's password" /></td>
     </tr>
     <tr>
       <td>Service name: </td>
-      <td><input type="text" name="connection[service]" value="<?php echo htmlspecialchars($_SESSION[ 'connection' ][ 'service' ]); ?>" title="Enter a tnsnames.ora identifier, or leave blank for local databases" /></td>
+      <td><input type="text" required name="connection[service]" value="<?php echo htmlspecialchars($_SESSION[ 'connection' ][ 'service' ]); ?>" title="Enter a tnsnames.ora identifier, or leave blank for local databases" /></td>
     </tr>
     <tr>
       <td colspan="2" align="center"><input type="submit" value="Connect to Oracle" accesskey="c" title="Click to log in [c]" /></td>
